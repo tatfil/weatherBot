@@ -2,7 +2,6 @@ package demo.example.model;
 
 public class WeatherUnit {
 
-    private String startTime;
     private String temperature;
     private String temperatureApparent;
     private String cloudCover;
@@ -10,14 +9,6 @@ public class WeatherUnit {
     private String windGust;
     private String humidity;
     private String precipitationProbability;
-
-    public String getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
 
     public String getTemperature() {
         return temperature;
@@ -78,8 +69,7 @@ public class WeatherUnit {
 
     @Override
     public String toString() {
-        return "WeatherUnit{" +
-                "startTime='" + startTime + '\'' +
+        return "{" +
                 ", temperature='" + temperature + '\'' +
                 ", temperatureApparent='" + temperatureApparent + '\'' +
                 ", cloudCover='" + cloudCover + '\'' +

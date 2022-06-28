@@ -10,7 +10,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -58,7 +58,7 @@ public class WeatherBot extends TelegramLongPollingBot {
             WeatherParserTomorrowIO weatherParserTomorrowIO = new WeatherParserTomorrowIO();
             ForecastRequest forecastRequest = new ForecastRequest();
             forecastRequest.setLocation("60.0911, 29.9502");
-            Map<String, WeatherUnit> map = new HashMap<>();
+            Map<String, WeatherUnit> map = new LinkedHashMap<>();
 
             try {
                 String str = weatherParserTomorrowIO.getResponse(forecastRequest);
